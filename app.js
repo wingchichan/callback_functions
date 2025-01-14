@@ -23,9 +23,20 @@ console.log(funcOne);
 function funcTwo(notifyUserCallback) {
   console.log("Running myAwesomeFunction... doing complex tasks...");
   console.log("Complex task complete. I will notify the user");
+  //   without this last bit, the console will not log funcOne when called in line 32
   notifyUserCallback();
 }
 // funcTwo();
 console.log(funcTwo);
 
 funcTwo(funcOne);
+
+// function myAwesomeFunction(chips) {
+//   console.log("Running myAwesomeFunction... doing complex tasks...");
+//   console.log("Complex task complete. I will notify the user");
+//   chips();
+// }
+
+// myAwesomeFunction(function () {
+//   console.log("notifyUser function was called!");
+// });
